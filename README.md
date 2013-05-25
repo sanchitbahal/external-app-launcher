@@ -1,6 +1,7 @@
 # External App Launcher
 
 A Cordova plugin to launch external applications from your Cordova-based iOS application.
+Compatible with Cordova >= 2.5.0
 
 ### Steps to install
 
