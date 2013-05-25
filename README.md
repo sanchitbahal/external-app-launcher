@@ -7,6 +7,7 @@ A Cordova plugin to launch external applications from your Cordova-based iOS app
 1. Install [cordova-plugman](https://github.com/apache/cordova-plugman).
 2. ```cd``` into your project directory.
 3. Execute the following command:
+
 ```
 plugman --platform ios --project . --plugin https://github.com/sbahal/external-app-launcher.git
 ```
