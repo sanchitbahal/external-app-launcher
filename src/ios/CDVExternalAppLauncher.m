@@ -3,6 +3,8 @@
 
 @implementation CDVExternalAppLauncher
 NSURL *defaultStoreUrl = nil;
+NSString *ok = @"OK";
+NSString *cancel = @"CANCEL";
 
 - (void)launch:(CDVInvokedUrlCommand *)command {
     NSString *appUrlScheme = [command.arguments objectAtIndex:0];
@@ -31,15 +33,15 @@ NSURL *defaultStoreUrl = nil;
                 initWithTitle:title
                       message:alertMessage
                      delegate:self
-            cancelButtonTitle:@"OK"
-            otherButtonTitles:@"CANCEL", nil];
+            cancelButtonTitle:ok
+            otherButtonTitles:cancel, nil];
     }
     else {
         alertView = [[UIAlertView alloc]
                 initWithTitle:title
                       message:alertMessage
                      delegate:self
-            cancelButtonTitle:@"OK"
+            cancelButtonTitle:ok
             otherButtonTitles:nil];
     }
 
@@ -48,7 +50,7 @@ NSURL *defaultStoreUrl = nil;
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     NSString *selectedValue = [alertView buttonTitleAtIndex:buttonIndex];
-    if ([selectedValue isEqualToString:@"OK"] && defaultStoreUrl != nil) {
+    if ([selectedValue isEqualToString:ok] && defaultStoreUrl != nil) {
         [[UIApplication sharedApplication] openURL:defaultStoreUrl];
     }
 }
