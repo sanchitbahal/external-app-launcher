@@ -11,6 +11,12 @@ A Cordova plugin to launch external applications from your Cordova-based iOS app
 plugman --platform ios --project . --plugin https://github.com/sbahal/external-app-launcher.git
 ```
 
+### Steps to uninstall
+
+```
+plugman --uninstall --platform ios --project . --plugin org.cordova.plugins.ExternalAppLauncher
+```
+
 ### Usage
 
 ```
