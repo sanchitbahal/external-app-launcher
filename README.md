@@ -35,6 +35,6 @@ where,
 ### Example
 
 ```
-externalApp.launch('com.foo.MyApp', '', 'Please download the latest version of this app from the store', externalApp.alertType.OK);
-externalApp.launch('com.foo.MyApp', 'https://foo.com', 'Please download the latest version of this app from the store', externalApp.alertType.OK_CANCEL);
+externalApp.launch(['com.foo.MyApp', '', 'Please download the latest version of this app from the store', externalApp.alertType.OK]);
+externalApp.launch(['com.foo.MyApp', 'https://foo.com', 'Please download the latest version of this app from the store', externalApp.alertType.OK_CANCEL]);
 ```
