@@ -1,0 +1,23 @@
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="org.cordova.plugins.ExternalAppLauncher"
+        version="1.0.0">
+
+	<name>External App Launcher</name>
+
+    <engines>
+        <engine name="cordova" version=">=2.5.0"/>
+    </engines>
+
+    <asset src="www/js/externalAppLauncher.js" target="lib/cordova/externalAppLauncher.js"/>
+
+    <platform name="ios">
+	    <config-file target="config.xml" parent="plugins">
+	    	<plugin name="ExternalAppLauncher" value="CDVExternalAppLauncher"/>
+	    </config-file>
+
+	    <header-file src="src/ios/CDVExternalAppLauncher.h"/>
+
+	    <source-file src="src/ios/CDVExternalAppLauncher.m"/>
+	</platform>
+
+</plugin>
